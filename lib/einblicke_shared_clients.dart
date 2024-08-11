@@ -1,5 +1,6 @@
 library einblicke_shared_clients;
 
+export 'src/core/custom_cupertino_properties.dart';
 export 'src/core/data/data_sources/server_remote_handler.dart';
 export 'src/core/data/repository_impl/repository_failure_handler.dart';
 export 'src/core/theme/custom_cupertino_theme.dart';
