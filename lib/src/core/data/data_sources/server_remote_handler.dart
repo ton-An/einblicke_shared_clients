@@ -156,16 +156,19 @@ class ServerRemoteHandler {
       if (accessToken != null) "Authorization": "Bearer $accessToken",
     };
 
-    final Response response = await dio.get(path,
-        options: Options(
-          headers: headers,
-          responseType: ResponseType.bytes,
-        ));
+    final Response response = await dio.get(
+      path,
+      options: Options(
+        headers: headers,
+        responseType: ResponseType.bytes,
+      ),
+    );
 
     if (response.statusCode == 200) {
       return response.data as Uint8List;
     } else {
-      final Map<String, dynamic> responseBody = jsonDecode(response.data);
+      final Map<String, dynamic> responseBody =
+          jsonDecode(String.fromCharCodes(response.data));
       final Failure failure =
           failureMapper.mapCodeToFailure(responseBody["code"]);
 

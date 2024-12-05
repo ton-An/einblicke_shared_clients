@@ -12,7 +12,9 @@ class Loader extends StatelessWidget {
         color: Colors.grey.shade200,
         shape: BoxShape.circle,
       ),
-      child: const CupertinoActivityIndicator(),
+      child: const CupertinoActivityIndicator(
+        color: Color(0xFF3C3C44),
+      ),
     );
   }
 }
