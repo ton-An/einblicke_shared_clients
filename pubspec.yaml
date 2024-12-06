@@ -16,7 +16,8 @@ dependencies:
   flutter_secure_storage: ^9.0.0
   equatable: ^2.0.5
   einblicke_shared:
-    path: ../einblicke_shared/
+    git:
+      url: https://github.com/ton-An/einblicke_shared/
   dio: ^5.4.0
 
 dev_dependencies:
